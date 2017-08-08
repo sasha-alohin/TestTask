@@ -34,7 +34,7 @@ public class TextParser {
 		}
 		List<String> wordsList = getAllMatching(lines);
 		List<WordCount> wordCountList = new ArrayList<>();
-		wordsList.forEach(word->{
+		wordsList.forEach(word -> {
 			boolean contains = false;
 			for (WordCount wordCount1 : wordCountList) {
 				if (wordCount1.getName().equals(word)) {
@@ -56,12 +56,13 @@ public class TextParser {
 
 	public void sortCollection(List<WordCount> wordCountList) {
 		wordCountList.sort((word1, word2) -> {
-			if (word1.getCount() < word2.getCount())
+			if (word1.getCount() < word2.getCount()) {
 				return 1;
-			else if (word1.getCount() > word2.getCount())
+			} else if (word1.getCount() > word2.getCount()) {
 				return -1;
-			else
+			} else {
 				return word1.getName().compareTo(word2.getName());
+			}
 		});
 	}
 
