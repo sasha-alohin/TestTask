@@ -1,4 +1,4 @@
-package main;
+package com.textparser.entity;
 
 public class WordCount {
 	private String name;
